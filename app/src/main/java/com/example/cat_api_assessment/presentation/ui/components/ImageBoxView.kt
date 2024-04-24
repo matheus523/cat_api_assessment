@@ -9,9 +9,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.example.cat_api_assessment.data.model.Image
+
+private val IMAGE_SIZE: Dp = 150.dp
 
 @Composable
 fun ImageBoxView(
@@ -22,12 +25,12 @@ fun ImageBoxView(
 ) {
     Box(
         modifier = modifier
-            .size(150.dp)
+            .size(IMAGE_SIZE)
             .clip(shape = CardDefaults.elevatedShape)
     ) {
         if (image == null) {
             Image(
-                modifier = modifier.size(150.dp),
+                modifier = modifier.size(IMAGE_SIZE),
                 painter = painterResource(id = placeHolderResourceId),
                 contentDescription = "place holder",
                 contentScale = ContentScale.FillBounds
