@@ -29,3 +29,7 @@ Search/filter option: Allowing users to search or filter the list of cat breeds 
 Detail view: Providing a detailed view where users can access additional information about each cat breed.
 
 
+## PS
+Typically, I would have placed the file keystore.properties in the git.ignore, but for the assessment, I did not do that.
+
+
