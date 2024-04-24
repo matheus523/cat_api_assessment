@@ -10,4 +10,7 @@ object Constants {
     const val READ_TIMEOUT: Long = 6 // seconds to read
     const val CONNECTION_TIMEOUT: Long = 6 // seconds to connect
     const val WRITE_TIMEOUT: Long = 6 // seconds to write
+
+    /* Animations */
+    const val NAV_ANIMATION_DURATION: Int = 600
 }
