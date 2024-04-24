@@ -34,6 +34,10 @@ android {
         //return empty key in case something goes wrong
         val apiKey = properties.getProperty("API_KEY") ?: ""
         buildConfigField(type = "String", name = "API_KEY", value = apiKey)
+
+        val catBaseUrl = "https://api.thecatapi.com/"
+        val version1 = "V1"
+        buildConfigField(type = "String", name = "CAT_URL_V1", value = "\"$catBaseUrl$version1/\"")
     }
 
     buildTypes {
