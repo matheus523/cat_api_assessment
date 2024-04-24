@@ -4,4 +4,14 @@
     //MARK: - Cat Intro View
     <string name="cat_intro_text">Een app helemaal over katten</string>
     <string name="cat_intro_button_text">Bekijk alle katten</string>
+
+    //MARK: - Cat List View
+    <string name="country_code">Landcode:</string>
+    <string name="temperament">Karakter:</string>
+
+    //MARK: - Buttons
+    <string name="retry">Opnieuw proberen</string>
+
+    <string name="error_title">Verbindingsfout</string>
+    <string name="error_body">Het ophalen van de lijst is mislukt. Klik op \'Opnieuw proberen\' om het opnieuw te proberen.</string>
 </resources>

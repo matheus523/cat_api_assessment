@@ -2,6 +2,7 @@ package com.example.cat_api_assessment.data.model
 
 import com.example.cat_api_assessment.data.service.jsonDeserializer.RangeDeserializer
 import com.example.cat_api_assessment.data.service.jsonDeserializer.StringListDeserializer
+import com.example.cat_api_assessment.utils.IAnimalBreed
 import com.google.gson.annotations.JsonAdapter
 import com.google.gson.annotations.SerializedName
 
@@ -84,4 +85,13 @@ data class CatBreed(
     val referenceImageId: String,
     @SerializedName("image")
     val image: Image?,
-)
+) : IAnimalBreed {
+    override fun getAnimalBreed(): AnimalBreed {
+        return AnimalBreed(
+            animalCountryCode = countryCode,
+            animalImage = image,
+            animalTemperament = temperament,
+            animalName = name
+        )
+    }
+}

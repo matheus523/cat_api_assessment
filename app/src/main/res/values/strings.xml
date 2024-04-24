@@ -4,4 +4,15 @@
     //MARK: - Cat Intro View
     <string name="cat_intro_text">An app all about cats</string>
     <string name="cat_intro_button_text">See all cats</string>
+
+    //MARK: - Cat List View
+    <string name="country_code">Country code:</string>
+    <string name="temperament">Temperament:</string>
+
+    //MARK: - Buttons
+    <string name="retry">Retry</string>
+
+    //MARK: - Error
+    <string name="error_title">Connection Error</string>
+    <string name="error_body">Failed to retrieve the list, click on \'Retry\' to try again.</string>
 </resources>
