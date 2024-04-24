@@ -6,18 +6,16 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
-import com.example.cat_api_assessment.R
-import com.example.cat_api_assessment.presentation.route.IntroRoute
-import com.example.cat_api_assessment.presentation.ui.intro.IntroView
+import com.example.cat_api_assessment.presentation.route.AnimalBreedRoute
 import com.example.cat_api_assessment.utils.Constants.NAV_ANIMATION_DURATION
 
-fun NavGraphBuilder.introNavGraph(navController: NavHostController, startDestination: IntroRoute) {
+fun NavGraphBuilder.animalBreedNavGraph(navController: NavHostController) {
     navigation(
-        route = Graph.INTRO,
-        startDestination = startDestination.route,
+        route = Graph.ANIMAL_BREED,
+        startDestination = AnimalBreedRoute.AnimalBreedListRoute.route,
     ) {
         composable(
-            route = IntroRoute.CatBreedIntroRoute.route,
+            route = AnimalBreedRoute.AnimalBreedListRoute.route,
             enterTransition = {
                 slideIntoContainer(
                     AnimatedContentTransitionScope.SlideDirection.Left,
@@ -35,16 +33,15 @@ fun NavGraphBuilder.introNavGraph(navController: NavHostController, startDestina
                     AnimatedContentTransitionScope.SlideDirection.Left,
                     animationSpec = tween(NAV_ANIMATION_DURATION)
                 )
-            }
+            },
+            popExitTransition = {
+                slideOutOfContainer(
+                    AnimatedContentTransitionScope.SlideDirection.Right,
+                    animationSpec = tween(NAV_ANIMATION_DURATION)
+                )
+            },
         ) {
-            IntroView(
-                imageResourceId = R.drawable.the_cat_api_image,
-                introButtonTextId = R.string.cat_intro_button_text,
-                introTextId = R.string.cat_intro_text,
-                onButtonClick = {
-                    navController.navigate(route = Graph.ANIMAL_BREED) { launchSingleTop = true }
-                }
-            )
+
         }
     }
 }

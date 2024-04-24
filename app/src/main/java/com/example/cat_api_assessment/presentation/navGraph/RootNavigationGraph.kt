@@ -13,10 +13,12 @@ fun RootNavigationGraph(navController: NavHostController, startDestination: Intr
         startDestination = Graph.INTRO
     ) {
         introNavGraph(navController = navController, startDestination = startDestination)
+        animalBreedNavGraph(navController = navController)
     }
 }
 
 object Graph {
     const val ROOT: String = "root_graph"
     const val INTRO: String = "intro_graph"
+    const val ANIMAL_BREED: String = "animal_breed_graph"
 }
