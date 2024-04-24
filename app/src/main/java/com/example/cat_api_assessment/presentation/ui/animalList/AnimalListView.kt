@@ -23,7 +23,6 @@ fun AnimalListView(
             buttonText = stringResource(id = R.string.retry)
         ) { onDialogButtonClick() }
     }
-
     PaginationListView(pagingItems = pagingItems, onError = onError) { index: Int ->
         AnimalListElement(animalBreed = pagingItems[index]!!)
     }

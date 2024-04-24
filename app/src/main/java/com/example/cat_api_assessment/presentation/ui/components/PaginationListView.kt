@@ -4,6 +4,8 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
 import androidx.compose.material3.CircularProgressIndicator
@@ -36,7 +38,13 @@ fun <T : Any> PaginationListView(
         else SMALL_SCREEN_GRID_CELLS
 
     LazyVerticalStaggeredGrid(
-        modifier = modifier.fillMaxSize(),
+        modifier = modifier
+            .fillMaxSize()
+            .systemBarsPadding()
+            .padding(
+                vertical = dimensions.mediumLargePadding,
+                horizontal = dimensions.smallMediumPadding
+            ),
         columns = StaggeredGridCells.Fixed(gridCells),
         verticalItemSpacing = dimensions.mediumSpacing,
         horizontalArrangement = Arrangement.spacedBy(dimensions.mediumSpacing),
