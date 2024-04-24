@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">cat_api_assessment</string>
+    <string name="app_name" translatable="false">cat_api_assessment</string>
+
+    //MARK: - Cat Intro View
+    <string name="cat_intro_text">An app all about cats</string>
+    <string name="cat_intro_button_text">See all cats</string>
 </resources>

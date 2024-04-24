@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    //MARK: - Cat Intro View
+    <string name="cat_intro_text">Een app helemaal over katten</string>
+    <string name="cat_intro_button_text">Bekijk alle katten</string>
+</resources>

@@ -6,7 +6,9 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
+import com.example.cat_api_assessment.R
 import com.example.cat_api_assessment.presentation.route.IntroRoute
+import com.example.cat_api_assessment.presentation.ui.intro.IntroView
 import com.example.cat_api_assessment.utils.Constants.NAV_ANIMATION_DURATION
 
 fun NavGraphBuilder.introNavGraph(navController: NavHostController, startDestination: IntroRoute) {
@@ -35,7 +37,14 @@ fun NavGraphBuilder.introNavGraph(navController: NavHostController, startDestina
                 )
             }
         ) {
+            IntroView(
+                imageResourceId = R.drawable.the_cat_api_image,
+                introButtonTextId = R.string.cat_intro_button_text,
+                introTextId = R.string.cat_intro_text,
+                onButtonClick = {
 
+                }
+            )
         }
     }
 }
